@@ -5,6 +5,8 @@ import os
 from requests_toolbelt.utils import dump
 
 from .avstudio_devices import Devices
+from .avstudio_scenes import Scenes
+from .avstudio_rendering import Rendering
 from .exceptions import *
 
 
@@ -151,6 +153,7 @@ class AVStudioAPI2(object):
     def __init__(self, host="go.avstudio.com"):
         self.HTTP = APIAccess2(host)
         self.Devices = Devices(self.HTTP)
+        self.Scenes = Scenes(self.HTTP)
 
     def setAuthToken(self, token):
         self.HTTP.setAuthToken(token)
