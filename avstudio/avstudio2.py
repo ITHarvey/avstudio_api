@@ -154,6 +154,7 @@ class AVStudioAPI2(object):
         self.HTTP = APIAccess2(host)
         self.Devices = Devices(self.HTTP)
         self.Scenes = Scenes(self.HTTP)
+        self.Rendering = Rendering(self.HTTP)
 
     def setAuthToken(self, token):
         self.HTTP.setAuthToken(token)
